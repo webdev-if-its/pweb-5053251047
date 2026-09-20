@@ -1,0 +1,62 @@
+p {
+  line-height: 1.5;
+}
+
+.deskripsi {
+  color: var(--warna-aksen);
+}
+
+#judul-utama {
+  color: var(--warna-aksen);
+}
+
+.kotak {
+  background-color: #eef7ee;
+  padding: 20px;
+  border: 2px solid var(--warna-aksen);
+  margin: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+
+.daftar > li {
+  list-style: square;
+}
+
+.tombol:hover {
+  background-color: var(--warna-aksen);
+}
+.tombol:focus-visible {
+  background-color: var(--warna-aksen);
+}
+
+
+p.pengumuman {
+  color: #999999;
+}
+
+#pengumuman-utama {
+  color: var(--warna-aksen);
+}
+
+
+h1 {
+  font-size: 2rem;
+}
+
+
+
+:root {
+  --warna-latar: #ffffff;
+  --warna-teks: #222222;
+  --warna-aksen: #2c6e49;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --warna-latar: #222222;
+    --warna-teks: #eeeeee;
+    --warna-aksen: #8fd694;
+  }
+}
