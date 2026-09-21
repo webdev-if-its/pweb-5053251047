@@ -27,25 +27,33 @@ body {
 
 /* Level 4 */
 .tata-letak {
-  flex: 0 0 250px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .sidebar {
-  background-color: #f0f0f0;
-  padding: 1rem;
+  flex: 0 0 250px;
+  width: 250px;
+  box-sizing: border-box;
 }
 
 .konten {
-  background-color: #ffffff;
-  padding: 1rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 /* Level 5 */
 .info-kontak {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Level 6 */
 .kisi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .kartu-grid {
