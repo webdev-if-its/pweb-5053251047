@@ -1,0 +1,137 @@
+:root {
+  --navy: #2b2f6b;
+  --ink: #0a0a0a;
+  --text: #555;
+  --yellow: #fdc450;
+  --light: #f6f6f6;
+}
+ 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  background: #c4c4c4;
+  padding: 60px 60px 0;
+}
+ 
+.page {
+  background: #fff;
+  max-width: 1480px;
+  min-height: 800px;
+  margin: 0 auto;
+  padding: 20px 92px 80px;
+  border-radius: 14px 14px 0 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.logo { height: 70px; width: auto; }
+ 
+.Menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.Menu ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+ 
+.Menu a {
+  text-decoration: none;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.Menu ul a:hover { text-decoration: underline; }
+ 
+.shop {
+  background: var(--navy);
+  color: #fff !important;
+  padding: 14px 38px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+header { margin-top: 140px; }
+ 
+h1 {
+  font-size: 56px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+ 
+header p {
+  margin-top: 30px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text);
+}
+ 
+.button {
+  display: flex;
+  gap: 18px;
+  margin-top: 44px;
+}
+ 
+button {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--navy);
+  padding: 16px 40px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: filter .2s;
+}
+
+.buy {
+    background: var(--yellow);
+}
+
+h2 {
+  font-size: 56px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.review {
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+}
+
+.review-image {
+    width: 8vw;
+    height: 6vw;
+}
+
+.tas {
+    width: 3vw;
+    height: 3vw:
+}
+
+.suplemen {
+    width = 25vw;
+    height = 25vw;
+}
+.lower {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
