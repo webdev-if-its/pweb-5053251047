@@ -51,6 +51,15 @@ self.addEventListener('install', (event) => {
 // Pakai caches.keys() untuk melihat semua nama cache yang ada, lalu
 // caches.delete(nama) untuk yang sudah usang. Jangan hapus NAMA_CACHE
 // yang sedang dipakai.
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((namaCache) => Promise.all(
+      namaCache
+        .filter((nama) => nama !== NAMA_CACHE)
+        .map((nama) => caches.delete(nama))
+    ))
+  );
+});
 // Level 3 — TODO: daftarkan listener 'fetch'.
 //
 // Level 7 — di dalam listener itu, route permintaan ke strategi yang
@@ -61,3 +70,15 @@ self.addEventListener('install', (event) => {
 // (request.mode === 'navigate') yang gagal total (networkFirst
 // menolak/reject), kembalikan caches.match('/offline.html') sebagai
 // cadangan, alih-alih membiarkan halamannya gagal dimuat.
+self.addEventListener('fetch', (event) => {
+  const strategi = adalahAsetStatis(event.request)
+    ? cacheFirst(event.request)
+    : networkFirst(event.request);
+
+  event.respondWith(
+    strategi.catch((error) => {
+      if (event.request.mode !== 'navigate') throw error;
+      return caches.match('/offline.html');
+    })
+  );
+});
